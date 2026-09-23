@@ -761,8 +761,11 @@ img {
 
 /* =========================
    TABLET
-========================= */@media (max-width: 950px) {
-
+========================= */
+@media (max-width: 950px) {
+.nav-links {
+        gap: 22px;
+    }
     .hero-container {
         grid-template-columns: 1fr 0.75fr;
         gap: 35px;
@@ -816,7 +819,18 @@ img {
         min-height: 68px;
     }
 
-    .nav-links {
+     .nav-links {
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none;
+        flex: 1;
+        min-width: 0;
+        margin-left: 20px;
+    }
+    
+    .nav-links::-webkit-scrollbar {
         display: none;
     }
 
